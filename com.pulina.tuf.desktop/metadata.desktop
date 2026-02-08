@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=TUF Custom Splash
+Comment=Animation sequence for pulina69
+Type=Service
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-PluginInfo-Name=com.pulina.tuf.desktop
+X-KDE-PluginInfo-Author=Pulina

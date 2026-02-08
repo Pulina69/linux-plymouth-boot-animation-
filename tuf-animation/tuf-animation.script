@@ -1,0 +1,29 @@
+# Load the sequence of images
+for (i = 0; i < 35; i++) {
+  filename = "0" + i + ".png";
+  if (i >= 10) filename = i + ".png";
+  anim_image[i] = Image(filename);
+}
+
+# Determine screen center
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+# Create the sprite
+sprite = Sprite();
+
+# Animation logic (updates every frame)
+progress = 0;
+fun refresh_callback () {
+  # Calculate index based on time or progress
+  index = progress % 35;
+  sprite.SetImage(anim_image[index]);
+  
+  # Center the image on screen
+  sprite.SetX(screen_width / 2 - anim_image[index].GetWidth() / 2);
+  sprite.SetY(screen_height / 2 - anim_image[index].GetHeight() / 2);
+  
+  progress++;
+}
+
+Plymouth.SetRefreshFunction(refresh_callback);

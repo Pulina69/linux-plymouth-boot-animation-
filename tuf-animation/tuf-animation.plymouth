@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=TUF Custom Animation
+Description=Custom boot animation for Kubuntu
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/tuf-animation
+ScriptFile=/usr/share/plymouth/themes/tuf-animation/tuf-animation.script
